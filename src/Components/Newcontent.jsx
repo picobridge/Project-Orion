@@ -59,7 +59,7 @@ export default function Newcontent() {
         <div className="relative w-full max-w-md">
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
             <img
-              src="/img6.jpeg"
+              src="ceo.jpg"
               fill
               className="object-cover w-full h-full"
               priority

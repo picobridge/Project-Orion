@@ -69,12 +69,12 @@ export default function Newcontent() {
         </div>
 
         <img
-          src="../../public/pattern4.png"
+          src="pattern4.png"
           className="absolute top-28 right-24 hidden md:block"
         />
       </section>
       <img
-        src="../../public/pattern5.png"
+        src="pattern5.png"
         className="absolute bottom-28 left-2 hidden md:block"
       />
     </div>

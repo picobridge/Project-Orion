@@ -4,31 +4,31 @@ function GallerySection() {
   const galleryItems = [
     {
       id: 1,
-      src: "/public/img9.jpeg",
+      src: "img9.jpeg",
       alt: "School community gathering",
       className: "col-span-1 lg:col-span-1",
     },
     {
       id: 2,
-      src: "/public/img8.jpeg",
+      src: "img8.jpeg",
       alt: "Teachers and staff",
       className: "col-span-1 lg:col-span-1",
     },
     {
       id: 3,
-      src: "/public/img7.jpeg",
+      src: "img7.jpeg",
       alt: "Outdoor school event",
       className: "col-span-1 lg:col-span-1",
     },
     {
       id: 4,
-      src: "/public/img4.jpeg",
+      src: "img4.jpeg",
       alt: "Team building activity",
       className: "col-span-1 md:col-span-2 lg:col-span-2",
     },
     {
       id: 5,
-      src: "/public/img5.jpeg",
+      src: "img5.jpeg",
       alt: "Sports event",
       className: "col-span-1 lg:col-span-1",
     },
@@ -67,12 +67,12 @@ function GallerySection() {
       </div>
 
       <img
-        src="/public/pattern4.png"
+        src="pattern4.png"
         className="absolute top-12 left-2 hidden md:block"
         alt=""
       />
       <img
-        src="/public/pattern2.png"
+        src="pattern2.png"
         className="absolute bottom-28 right-2 hidden md:block rotate-180"
         alt=""
       />

@@ -5,25 +5,33 @@ const slides = [
     id: 1,
     image: "../../public/boy-holding-white-paper-school.jpg",
     text: "Academic Excellence",
-    subtitle: "Building Strong Foundations",
+    subtitle: "Nurturing Young Minds",
+    maintext:
+      "We provide a caring environment where children learn, grow, and discover their unique potential through engaging lessons and fun activities.",
   },
   {
     id: 2,
-    image: "../../public/high-shool-science-lab.png",
-    text: "Science and Innovation",
-    subtitle: "Discovering Tomorrow",
+    image: "../../public/img11.jpeg",
+    text: "Future Leaders",
+    subtitle: "Learning Today, Leading Tomorrow",
+    maintext:
+      "Our school inspires curiosity, creativity, and confidence — helping every pupil develop strong values and essential skills for tomorrow’s world.",
   },
   {
     id: 3,
-    image: "../../public/female-student.jpg",
-    text: "Athelets ",
-    subtitle: "Discovering Tomorrow",
+    image: "../../public/img7.jpeg",
+    text: "Character & Discipline",
+    subtitle: "Excellence in Education",
+    maintext:
+      "We offer quality education rooted in discipline, knowledge, and care — shaping well-rounded pupils with bright futures.",
   },
   {
     id: 4,
-    image: "../../public/graduation.jpg",
-    text: "Graduation Day",
-    subtitle: "New Beginnings Await",
+    image: "../../public/img2.jpeg",
+    text: "Joyful Learning",
+    subtitle: "Where Learning Feels Like Fun",
+    maintext:
+      "We blend learning and play to make every day exciting. Our goal is to help children explore, imagine, and learn with joy and confidence.",
   },
 ];
 
@@ -40,13 +48,17 @@ export default function LandingSlider() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div
+      className="relative w-screen h-screen overflow-hidden"
+      data-aos="fade-up"
+      data-aos-delay="400"
+    >
       {/* Image Container */}
-      <div className="relative w-full h-full">
+      <div className="relative max-w-8xl m-auto h-full ">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-2000 ease-in-out ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -64,11 +76,12 @@ export default function LandingSlider() {
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-lg max-w-2xl">
+              <h1 className=" font-bold text-white">{slide.subtitle}</h1>
+              <h3 className="text-[#FFBF00] text-5xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg max-w-2xl">
                 {slide.text}
-              </h1>
+              </h3>
               <p className="text-xl md:text-2xl text-white/90 drop-shadow-md max-w-xl">
-                {slide.subtitle}
+                {slide.maintext}
               </p>
             </div>
           </div>

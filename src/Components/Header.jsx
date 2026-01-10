@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import {
   Menu,
   X,
@@ -15,44 +16,39 @@ import {
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="w-full">
+    <div className="w-full " data-aos="fade-up">
       {/* Top Contact Bar */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 md:block px-6 lg:px-8 hidden">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between py-0 gap-3 md:gap-0">
             {/* Contact Information */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 text-xs md:text-xs">
               {/* Phone 1 */}
               <a
-                href="tel:+27073950511"
-                className="flex items-center gap-2 text-amber-900 hover:text-amber-700 transition"
+                href="tel:+234 7070044177"
+                className="flex items-center gap-2 text-[#FFBF00] transition"
               >
-                <Phone size={16} className="text-amber-900" />
-                <span>070 7395 0511</span>
+                <Phone size={16} className="text-[#FFBF00] " />
+                <span className="font-bold">070 700 441 77</span>
               </a>
 
               {/* Phone 2 */}
-              <a
-                href="tel:+27809808088"
-                className="flex items-center gap-2 text-amber-900 hover:text-amber-700 transition"
-              >
-                <Phone size={16} className="text-amber-900" />
-                <span>0809 808 6088</span>
-              </a>
 
               {/* Email */}
               <a
-                href="mailto:info@tfsikoyi.com"
-                className="flex items-center gap-2 text-amber-900 hover:text-amber-700 transition"
+                href="mailto:brightrainbowsacademy@gmail.com"
+                className="flex items-center gap-2 text-[#FFBF00] transition"
               >
-                <Mail size={16} className="text-amber-900" />
-                <span>info@tfsikoyi.com</span>
+                <Mail size={16} className="text-[#FFBF00]" />
+                <span className="font-bold">
+                  brightrainbowsacademy@gmail.com
+                </span>
               </a>
 
               {/* Hours */}
-              <div className="flex items-center gap-2 text-gray-700">
-                <Calendar size={16} className="text-amber-900" />
-                <span>Mon - Fri 8am - 6pm</span>
+              <div className="flex items-center gap-2 text-[#FFBF00]">
+                <Calendar size={16} className="text-[#FFBF00]" />
+                <span className="font-bold">Mon - Fri 8am - 6pm</span>
               </div>
             </div>
 
@@ -62,35 +58,35 @@ function Header() {
               <div className="flex items-center gap-3">
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-amber-900 transition"
+                  className="text-gray-600 hover:text-[#FFBF00] transition"
                   aria-label="Facebook"
                 >
                   <Facebook size={18} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-amber-900 transition"
+                  className="text-gray-600 hover:text-[#FFBF00]  transition"
                   aria-label="Twitter"
                 >
                   <Twitter size={18} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-amber-900 transition"
+                  className="text-gray-600 hover:text-[#FFBF00]  transition"
                   aria-label="YouTube"
                 >
                   <Youtube size={18} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-amber-900 transition"
+                  className="text-gray-600 hover:text-[#FFBF00]  transition"
                   aria-label="Instagram"
                 >
                   <Instagram size={18} />
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-amber-900 transition"
+                  className="text-gray-600 hover:text-[#FFBF00]  transition"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={18} />
@@ -98,8 +94,13 @@ function Header() {
               </div>
 
               {/* Contact Button */}
-              <button className="bg-amber-900 hover:bg-amber-800 text-white px-4 py-3 font-semibold transition whitespace-nowrap">
-                CONTACT US
+              <button className="bg-[#FFBF00]  hover:bg-[#FFBF00] cursor-pointer text-white px-4 py-3 font-semibold transition whitespace-nowrap">
+                <Link to="footer" smooth={true} duration={700}>
+                  <Link to="footer" smooth={true} duration={1000}>
+                    {" "}
+                    CONTACT US{" "}
+                  </Link>
+                </Link>
               </button>
             </div>
           </div>
@@ -109,56 +110,63 @@ function Header() {
       {/* Navigation Bar */}
       <nav className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between text-sm py-2">
+          <div className="flex items-center justify-between text-sm py-1">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-full flex items-center justify-center border-2 border-amber-900 shadow-sm">
-                <span className="text-2xl font-bold text-amber-900">TI</span>
-              </div>
+              <img src="logo.png" width={70} />
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <div className="group relative">
-                <button className="text-gray-800 font-medium hover:text-amber-900 transition flex items-center gap-1">
-                  About Us
-                  <span className="text-sm">▼</span>
+                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
+                  <Link to="about" smooth={true} duration={700}>
+                    {" "}
+                    About Us
+                  </Link>
                 </button>
               </div>
 
               <div className="group relative">
-                <button className="text-gray-800 font-medium hover:text-amber-900 transition flex items-center gap-1">
-                  Academics
-                  <span className="text-sm">▼</span>
+                <button className="text-gray-800 font-medium  cursor-pointer hover:text-[#FFBF00] transition flex items-center gap-1">
+                  <Link to="corevalues" smooth={true} duration={700}>
+                    {" "}
+                    Core Values{" "}
+                  </Link>
                 </button>
               </div>
 
               <div className="group relative">
-                <button className="text-gray-800 font-medium hover:text-amber-900 transition flex items-center gap-1">
-                  Media Hub
-                  <span className="text-sm">▼</span>
+                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
+                  <Link to="gallery" smooth={true} duration={700}>
+                    {" "}
+                    Our Gallery
+                  </Link>
                 </button>
               </div>
 
               <div className="group relative">
-                <button className="text-gray-800 font-medium hover:text-amber-900 transition flex items-center gap-1">
-                  Facility
-                  <span className="text-sm">▼</span>
+                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
+                  <Link to="newcontent" smooth={true} duration={700}>
+                    Facility
+                  </Link>
                 </button>
               </div>
 
               <a
                 href="#"
-                className="text-gray-800 font-medium hover:text-amber-900 transition"
+                className="text-gray-800 font-medium hover:text-[#FFBF00] transition"
               >
                 School Policies
               </a>
 
               <a
                 href="#"
-                className="text-gray-800 font-medium hover:text-amber-900 transition"
+                className="text-gray-800 font-medium hover:text-[#FFBF00] transition"
               >
-                Contact Us
+                <Link to="footer" smooth={true} duration={700}>
+                  Contact Us
+                </Link>
               </a>
             </div>
 

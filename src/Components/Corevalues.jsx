@@ -7,7 +7,7 @@ import {
   Globe,
 } from "lucide-react";
 
-export default function CoreValues() {
+function CoreValues() {
   const values = [
     {
       icon: GraduationCap,
@@ -49,7 +49,7 @@ export default function CoreValues() {
 
   return (
     <section className="py-16 relative md:py-24 bg-[#f5f3f7]">
-      <div className="container mx-auto px-18 w-[70]">
+      <div className="container mx-auto px-8 w-[100%]">
         <h2 className="text-4xl font-bold mb-6 text-center" data-aos="fade-up">
           Our Core Values
         </h2>
@@ -134,13 +134,15 @@ export default function CoreValues() {
         </div>
       </div>
       <img
-        src="../../public/pattern5.png"
+        src="pattern5.png"
         className="absolute bottom-28 left-2 hidden md:block"
       />
       <img
-        src="../../public/pattern3.png"
+        src="pattern3.png"
         className="absolute top-28 right-20 hidden md:block"
       />
     </section>
   );
 }
+
+export default CoreValues;

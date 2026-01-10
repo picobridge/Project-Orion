@@ -145,19 +145,14 @@ function Header() {
                 </button>
               </div>
 
-              <div className="group relative">
-                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
-                  <Link to="newcontent" smooth={true} duration={700}>
-                    Facility
-                  </Link>
-                </button>
-              </div>
-
               <a
                 href="#"
                 className="text-gray-800 font-medium hover:text-[#FFBF00] transition"
               >
-                School Policies
+                <Link to="process" smooth={true} duration={1000}>
+                  {" "}
+                  Admission Process{" "}
+                </Link>
               </a>
 
               <a

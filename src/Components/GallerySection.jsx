@@ -1,55 +1,56 @@
+"use client";
+
 function GallerySection() {
   const galleryItems = [
     {
       id: 1,
-      src: "../../public/img9.jpeg",
+      src: "/public/img9.jpeg",
       alt: "School community gathering",
-      className: "col-span-1 row-span-1",
+      className: "col-span-1 lg:col-span-1",
     },
     {
       id: 2,
-      src: "../../public/img8.jpeg",
+      src: "/public/img8.jpeg",
       alt: "Teachers and staff",
-      className: "col-span-1 row-span-1",
+      className: "col-span-1 lg:col-span-1",
     },
     {
       id: 3,
-      src: "../../public/img7.jpeg",
+      src: "/public/img7.jpeg",
       alt: "Outdoor school event",
-      className: "col-span-1 row-span-1",
+      className: "col-span-1 lg:col-span-1",
     },
     {
       id: 4,
-      src: "../../public/img4.jpeg",
+      src: "/public/img4.jpeg",
       alt: "Team building activity",
-      className: "col-span-2 row-span-1",
+      className: "col-span-1 md:col-span-2 lg:col-span-2",
     },
     {
       id: 5,
-      src: "../../public/img5.jpeg",
+      src: "/public/img5.jpeg",
       alt: "Sports event",
-      className: "col-span-1 row-span-1",
+      className: "col-span-1 lg:col-span-1",
     },
   ];
 
   return (
     <section
       data-aos="fade-up"
-      className="relative bg-gray-100 py-16 px-4 md:px-8 lg:px-12"
+      className="relative bg-gray-100 py-16 px-4 md:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="mb-8 md:mb-10 lg:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
             Our Gallery
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base md:text-lg text-gray-600">
             Moments from our school community
           </p>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5 auto-rows-[220px] sm:auto-rows-[250px] md:auto-rows-[280px] lg:auto-rows-[320px]">
           {galleryItems.map((item) => (
             <div
               key={item.id}
@@ -64,16 +65,19 @@ function GallerySection() {
           ))}
         </div>
       </div>
-      <img
-        src="../../public/pattern4.png"
-        className="absolute top-12 left-2 hidden md:block"
-      />
 
       <img
-        src="../../public/pattern2.png"
+        src="/public/pattern4.png"
+        className="absolute top-12 left-2 hidden md:block"
+        alt=""
+      />
+      <img
+        src="/public/pattern2.png"
         className="absolute bottom-28 right-2 hidden md:block rotate-180"
+        alt=""
       />
     </section>
   );
 }
+
 export default GallerySection;

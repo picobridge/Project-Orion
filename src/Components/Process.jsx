@@ -1,3 +1,11 @@
+import React from "react";
+import {
+  FaRegFileAlt, // Application form
+  FaSchool, // School visit
+  FaClipboardCheck, // Assessment
+  FaRocket, // Welcome
+} from "react-icons/fa";
+
 function Process() {
   const steps = [
     {
@@ -5,28 +13,28 @@ function Process() {
       title: "Submit Application",
       description:
         "Complete the official enrollment form with your child's details and your contact information. Visit our school or contact us to begin the process.",
-      icon: "🏢",
+      icon: <FaRegFileAlt />,
     },
     {
       number: 2,
       title: "School Visit and Meeting",
       description:
-        "OSchedule a tour of our facilities and meet with our staff to discuss your child's needs, our curriculum, and answer any questions you may have.",
-      icon: "📋",
+        "Schedule a tour of our facilities and meet with our staff to discuss your child's needs, our curriculum, and answer any questions you may have.",
+      icon: <FaSchool />,
     },
     {
       number: 3,
       title: "Assessment and Placement",
       description:
-        " Your child will undergo a simple age-appropriate assessment to determine the best class placement for their learning journey.",
-      icon: "✓",
+        "Your child will undergo a simple age-appropriate assessment to determine the best class placement for their learning journey.",
+      icon: <FaClipboardCheck />,
     },
     {
       number: 4,
       title: "Welcome to Bright-Rainbow Schools",
       description:
         "After completing enrollment formalities and fee payment, your child officially becomes part of the Bright Rainbows family. We'll provide you with all necessary materials and information for a smooth start.",
-      icon: "🚀",
+      icon: <FaRocket />,
     },
   ];
 
@@ -39,10 +47,11 @@ function Process() {
             How it works?
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white text-balance">
-            What is process to Enroll Your Child{" "}
+            What is the process to Enroll Your Child
           </h2>
         </div>
 
+        {/* Steps */}
         <div
           data-aos="fade-up"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
@@ -51,7 +60,7 @@ function Process() {
             <div key={index} className="flex flex-col items-center relative">
               <div className="relative mb-8 flex flex-col items-center">
                 <div className="w-24 h-24 bg-red-500 rounded-full p-1 flex items-center justify-center shadow-lg">
-                  <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-3xl">
+                  <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-4xl text-red-600">
                     {step.icon}
                   </div>
                 </div>
@@ -87,13 +96,15 @@ function Process() {
         </div>
       </div>
 
+      {/* Decorative Clouds */}
       <div className="absolute bottom-0 left-0 right-0">
-        <img src="cloudimg.png" className="w-full " />
+        <img src="cloudimg.png" className="w-full" alt="Clouds" />
       </div>
-      <div className="absolute  -top-1 right-0 rotate-180">
-        <img src="cloudimg.png" className="w-full " />
+      <div className="absolute -top-1 right-0 rotate-180">
+        <img src="cloudimg.png" className="w-full" alt="Clouds" />
       </div>
     </section>
   );
 }
+
 export default Process;

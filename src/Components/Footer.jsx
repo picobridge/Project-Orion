@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 function Footer() {
   const [showScroll, setShowScroll] = useState(false);
@@ -30,8 +31,8 @@ function Footer() {
                   data-aos="fade-right"
                   className="text-4xl md:text-5xl font-bold text-black leading-tight"
                 >
-                  What are you waiting for to register and start this new
-                  adventure?
+                  What are you waiting for? Give your child the bright future
+                  they deserve!{" "}
                 </h2>
               </div>
             </div>
@@ -55,14 +56,19 @@ function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 relative">
             {/* Academics column */}
             <div>
-              <h3 className="text-red-600 font-bold text-lg mb-6">Academics</h3>
+              <h3 className="text-red-600 font-bold text-lg mb-6">
+                Quick Links
+              </h3>
               <ul className="space-y-3">
                 <li>
                   <a
                     href="#"
                     className="text-gray-700 hover:text-red-600 transition-colors text-sm"
                   >
-                    Admission Criteria
+                    <Link to="about" smooth={true} duration={1000}>
+                      {" "}
+                      About us{" "}
+                    </Link>
                   </a>
                 </li>
                 <li>
@@ -70,7 +76,10 @@ function Footer() {
                     href="#"
                     className="text-gray-700 hover:text-red-600 transition-colors text-sm"
                   >
-                    Curricular Activities
+                    <Link to="about" smooth={true} duration={1000}>
+                      {" "}
+                      Core values{" "}
+                    </Link>
                   </a>
                 </li>
                 <li>
@@ -78,7 +87,11 @@ function Footer() {
                     href="#"
                     className="text-gray-700 hover:text-red-600 transition-colors text-sm"
                   >
-                    Co-Curricular Activities
+                    {" "}
+                    <Link to="process" smooth={true} duration={1000}>
+                      {" "}
+                      Admission Process{" "}
+                    </Link>
                   </a>
                 </li>
                 <li>
@@ -95,7 +108,7 @@ function Footer() {
             {/* About Turkish column */}
             <div>
               <h3 className="text-red-600 font-bold text-lg mb-6">
-                About Turkish
+                About BrightRainbows
               </h3>
               <ul className="space-y-3">
                 <li>
@@ -111,7 +124,7 @@ function Footer() {
                     href="#"
                     className="text-gray-700 hover:text-red-600 transition-colors text-sm"
                   >
-                    Turkish International School
+                    BrightRainbows International School
                   </a>
                 </li>
                 <li>
@@ -119,7 +132,7 @@ function Footer() {
                     href="#"
                     className="text-gray-700 hover:text-red-600 transition-colors text-sm"
                   >
-                    Turkish Educations (PVT) LTD
+                    BrightRainbows Educations
                   </a>
                 </li>
               </ul>
@@ -130,14 +143,14 @@ function Footer() {
               <h3 className="text-red-600 font-bold text-lg mb-6">Contact</h3>
               <div className="space-y-4">
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Head Office: 73-B Tip Block Garden Town, Lahore.
+                  Location: Abakaliki, Ebonyi State, Nigeria{" "}
                 </p>
-                <p className="text-gray-700 text-sm">+92 303 0176005</p>
+                <p className="text-gray-700 text-sm">Phone: 07070044177</p>
                 <a
-                  href="mailto:turkisheducationsgroup@gmail.com"
+                  href="mailto:brightrainbowacademy@gmail.com"
                   className="text-gray-700 hover:text-red-600 transition-colors text-sm break-all"
                 >
-                  turkisheducationsgroup@gmail.com
+                  Email: brightrainbowsacademy@gmail.com{" "}
                 </a>
               </div>
             </div>

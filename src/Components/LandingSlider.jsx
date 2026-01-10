@@ -11,7 +11,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "public/img11.jpeg",
+    image: "img11.jpeg",
     text: "Future Leaders",
     subtitle: "Learning Today, Leading Tomorrow",
     maintext:
@@ -19,7 +19,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "public/img7.jpeg",
+    image: "img7.jpeg",
     text: "Character & Discipline",
     subtitle: "Excellence in Education",
     maintext:
@@ -27,7 +27,7 @@ const slides = [
   },
   {
     id: 4,
-    image: "public/img2.jpeg",
+    image: "img2.jpeg",
     text: "Joyful Learning",
     subtitle: "Where Learning Feels Like Fun",
     maintext:

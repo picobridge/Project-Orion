@@ -5,7 +5,6 @@ import { initAOS } from "./Utils/aosSetup";
 import React from "react";
 import Header from "./Components/Header";
 import LandingSlider from "./Components/LandingSlider";
-import ContentSection from "./Components/ContentSection";
 import Newcontent from "./Components/Newcontent.jsx";
 import CoreValues from "./Components/Corevalues.jsx";
 import AboutSection from "./Components/AboutSection.jsx";

@@ -99,7 +99,7 @@ export default function CoreValues() {
                 ></div>
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-xl">
                   <img
-                    src="../../public/img10.jpeg"
+                    src="img10.jpeg"
                     fill
                     className="object-cover w-full h-full"
                   />

@@ -36,7 +36,7 @@ export default function Newcontent() {
           {/* Video Thumbnail */}
           <div className="relative mt-8 w-full max-w-lg overflow-hidden rounded-xl shadow-2xl lg:mt-10">
             <div className="aspect-video relative">
-              <img src="../../public/img1.jpeg" fill className="object-cover" />
+              <img src="img1.jpeg" fill className="object-cover" />
               {/* Play Button Overlay */}
               <button
                 className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors hover:bg-black/30"
@@ -59,7 +59,7 @@ export default function Newcontent() {
         <div className="relative w-full max-w-md">
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
             <img
-              src="../../public/img6.jpeg"
+              src="/img6.jpeg"
               fill
               className="object-cover w-full h-full"
               priority

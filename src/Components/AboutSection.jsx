@@ -11,9 +11,9 @@ function AboutSection() {
         </p>
 
         <h1 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-          About BrightRainbow
+          About Bright-Rainbow-Academy
           <br />
-          International School
+          Academy 
         </h1>
 
         <div className="space-y-6 mb-12 text-base lg:text-lg leading-relaxed">

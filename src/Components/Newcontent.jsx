@@ -10,7 +10,7 @@ export default function Newcontent() {
       >
         <div className="mx-auto w-full max-w-2xl space-y-8 lg:space-y-10">
           <h1 className=" text-balance text-[] text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-            Welcome to Bright <p className="text-[#FFBF00]">Rainbows Academy</p>
+            Welcome to <span className="text-[#dc2626]">Bright</span> <p className="text-[#FFBF00]">Rainbows Academy</p>
           </h1>
 
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-base xl:text-lg">
@@ -28,8 +28,8 @@ export default function Newcontent() {
             </p>
 
             <p className="text-foreground">
-              - Greg Hughes -{" "}
-              <span className="font-semibold">Head of School</span>
+              - Mrs Uzoamaka Aniehe  -{" "}
+              <span className="font-semibold">Principal </span>
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Newcontent() {
         <div className="relative w-full max-w-md">
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
             <img
-              src="ceo.jpg"
+              src="principal.jpg"
               fill
               className="object-cover w-full h-full"
               priority

@@ -113,7 +113,7 @@ function Header() {
           <div className="flex items-center justify-between text-sm py-1">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img src="logo.png" width={70} />
+              <img src="logo.png" width={65} />
             </div>
 
             {/* Desktop Navigation */}

@@ -63,15 +63,39 @@ function AboutSection() {
         <div className="absolute bottom-12 right-4 w-12 h-12 bg-white rounded-full opacity-40"></div>
 
         {/* Main Image */}
-        <div className="relative z-10 flex justify-center items-center">
-          <img
-            src="img1.jpeg"
-            width={400}
-            height={800}
-            className="object-contain drop-shadow-lg"
-            priority
-          />
-        </div>
+        <div className="w-full sm:pr-6 pr-0.5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              {/* Main hero image - large, spans 2 cols and 2 rows */}
+              <div className="col-span-2 sm:col-span-2 sm:row-span-2">
+                <img
+                  src="grid1.jpeg"
+                  alt="Children learning and playing in a bright, colorful classroom environment"
+                  className="w-full h-full rounded-lg shadow-lg object-cover min-h-48 sm:min-h-80"
+                />
+              </div>
+
+              {/* Image 2 - top right, tall */}
+              <div className="col-span-1 sm:col-span-1 sm:row-span-1">
+                <img
+                  src="grid3.jpeg"
+                  alt="Student reading and studying with focused concentration"
+                  className="w-full h-full rounded-lg shadow-lg object-cover min-h-48 sm:min-h-80"
+                />
+              </div>
+
+              {/* Image 3 - wide bottom left */}
+              <div className="col-span-1 sm:col-span-1">
+                <img
+                  src="gird4.jpeg"
+                  alt="Teacher engaging with students in an interactive classroom setting"
+                  className="w-full h-full rounded-lg shadow-lg object-cover min-h-32 sm:min-h-40"
+                />
+              </div>
+
+              {/* Image 4 - small bottom right */}
+            
+            </div>
+          </div>
       </div>
       <div className="absolute bottom-0 -top-1 right-0">
         <img src="cloudimg.png" className="w-full rotate-180" />

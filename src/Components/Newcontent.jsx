@@ -15,16 +15,15 @@ export default function Newcontent() {
 
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-base xl:text-lg">
             <p className="text-pretty">
-              We are pleased to showcase our strong academic curriculum, our
-              world-class facilities, and the holistic nature of our educational
-              program that helps each one of our students to respect and
-              appreciate the world and their growing role within it.{" "}
+              <span className="font-bold">Uzoamaka Emelda Aniehe </span>is the proprietress of Bright Rainbows Academy Ishieke, Ebonyi State, where she leads with a single purpose: raising well-grounded children in a school that is both loving and fun.
+
+Her passion for education was shaped early — serving as Head Girl at Alasi Primary School, Agbor, and Senior Prefect at Marist Comprehensive Academy, Uturu. 
             </p>
 
             <p className="text-pretty">
-              We deeply love what we do at Bright Rainbows Academy, and we are
-              sure this will be evident as you continue your journey through the
-              pages of this website.
+             She holds a degree from the Federal University of Technology, Owerri (FUTO) and a Postgraduate Diploma in Education (PGDE) from Usman Danfodio University, Sokoto, and is currently preparing to pursue a Master of Education degree.
+
+Mrs. Aniehe's vision is simple: a warm, nurturing environment where every child flourishes morally, socially, and intellectually — and where curiosity, creativity, and excellence thrive.
             </p>
 
             <p className="text-foreground">
@@ -59,7 +58,7 @@ export default function Newcontent() {
         <div className="relative w-full max-w-md">
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
             <img
-              src="principal.jpg"
+              src="ceo.jpeg"
               fill
               className="object-cover w-full h-full"
               priority

@@ -13,39 +13,56 @@ import {
   Instagram,
   Youtube,
 } from "lucide-react";
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      if (isOpen) setIsOpen(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
+
+  const navLinks = [
+    { to: "about", label: "About Us" },
+    { to: "corevalues", label: "Core Values" },
+    { to: "gallery", label: "Our Gallery" },
+    { to: "process", label: "Admission Process", duration: 1000 },
+    { to: "footer", label: "Contact Us" },
+    { to: "facilities", label: "Facilities" },
+  ];
+
+  const handleNavClick = () => setIsOpen(false);
+
   return (
-    <div className="w-full " data-aos="fade-up">
+    <div className="w-full sticky top-0 z-50" data-aos="fade-up">
       {/* Top Contact Bar */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 md:block px-6 lg:px-8 hidden">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between py-0 gap-3 md:gap-0">
+      <div className="bg-white border-b border-gray-200 hidden md:block">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between py-2 gap-3">
             {/* Contact Information */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 text-xs md:text-xs">
-              {/* Phone 1 */}
+            <div className="flex items-center gap-6 text-xs">
               <a
-                href="tel:+234 7070044177"
-                className="flex items-center gap-2 text-[#FFBF00] transition"
+                href="tel:+2347070044177"
+                className="flex items-center gap-2 text-[#FFBF00] hover:text-[#e6ac00] transition-colors"
               >
-                <Phone size={16} className="text-[#FFBF00] " />
+                <Phone size={16} className="text-[#FFBF00]" />
                 <span className="font-bold">070 700 441 77</span>
               </a>
 
-              {/* Phone 2 */}
-
-              {/* Email */}
               <a
                 href="mailto:brightrainbowsacademy@gmail.com"
-                className="flex items-center gap-2 text-[#FFBF00] transition"
+                className="flex items-center gap-2 text-[#FFBF00] hover:text-[#e6ac00] transition-colors"
               >
                 <Mail size={16} className="text-[#FFBF00]" />
-                <span className="font-bold">
-                  brightrainbowsacademy@gmail.com
-                </span>
+                <span className="font-bold">brightrainbowsacademy@gmail.com</span>
               </a>
 
-              {/* Hours */}
               <div className="flex items-center gap-2 text-[#FFBF00]">
                 <Calendar size={16} className="text-[#FFBF00]" />
                 <span className="font-bold">Mon - Fri 8am - 6pm</span>
@@ -54,52 +71,22 @@ function Header() {
 
             {/* Social Icons & Contact Button */}
             <div className="flex items-center gap-4">
-              {/* Social Media Icons */}
               <div className="flex items-center gap-3">
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-[#FFBF00] transition"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-[#FFBF00]  transition"
-                  aria-label="Twitter"
-                >
-                  <Twitter size={18} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-[#FFBF00]  transition"
-                  aria-label="YouTube"
-                >
-                  <Youtube size={18} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-[#FFBF00]  transition"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-[#FFBF00]  transition"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={18} />
-                </a>
+                {[Facebook, Twitter, Youtube, Instagram, Linkedin].map((Icon, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200"
+                    aria-label={Icon.name}
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
               </div>
 
-              {/* Contact Button */}
-              <button className="bg-[#FFBF00]  hover:bg-[#FFBF00] cursor-pointer text-white px-4 py-3 font-semibold transition whitespace-nowrap">
+              <button className="bg-[#FFBF00] hover:bg-[#e6ac00] text-white px-4 py-2 rounded-md font-semibold transition-all duration-200 whitespace-nowrap text-xs uppercase tracking-wide">
                 <Link to="footer" smooth={true} duration={700}>
-                  <Link to="footer" smooth={true} duration={1000}>
-                    {" "}
-                    CONTACT US{" "}
-                  </Link>
+                  Contact Us
                 </Link>
               </button>
             </div>
@@ -108,67 +95,38 @@ function Header() {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="bg-white border-b border-gray-100">
+      <nav
+        className={`bg-white border-b border-gray-100 transition-shadow duration-300 ${
+          scrolled ? "shadow-md" : ""
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between text-sm py-1">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img src="logo.png" width={65} />
+              <img src="logo.png" width={65} alt="Bright Rainbows Academy" className="h-auto" />
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <div className="group relative">
-                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
-                  <Link to="about" smooth={true} duration={700}>
-                    {" "}
-                    About Us
-                  </Link>
-                </button>
-              </div>
-
-              <div className="group relative">
-                <button className="text-gray-800 font-medium  cursor-pointer hover:text-[#FFBF00] transition flex items-center gap-1">
-                  <Link to="corevalues" smooth={true} duration={700}>
-                    {" "}
-                    Core Values{" "}
-                  </Link>
-                </button>
-              </div>
-
-              <div className="group relative">
-                <button className="text-gray-800 cursor-pointer font-medium hover:text-[#FFBF00] transition flex items-center gap-1">
-                  <Link to="gallery" smooth={true} duration={700}>
-                    {" "}
-                    Our Gallery
-                  </Link>
-                </button>
-              </div>
-
-              <a
-                href="#"
-                className="text-gray-800 font-medium hover:text-[#FFBF00] transition"
-              >
-                <Link to="process" smooth={true} duration={1000}>
-                  {" "}
-                  Admission Process{" "}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  smooth={true}
+                  duration={link.duration || 700}
+                  className="text-gray-800 font-medium hover:text-[#FFBF00] transition-colors duration-200 cursor-pointer text-sm relative group"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFBF00] transition-all duration-300 group-hover:w-full" />
                 </Link>
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-800 font-medium hover:text-[#FFBF00] transition"
-              >
-                <Link to="footer" smooth={true} duration={700}>
-                  Contact Us
-                </Link>
-              </a>
+              ))}
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-amber-900"
+              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[#FFBF00] transition-all duration-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -176,36 +134,49 @@ function Header() {
           </div>
 
           {/* Mobile Navigation */}
-          {isOpen && (
-            <div className="md:hidden pb-4 border-t border-gray-200">
-              <div className="flex flex-col gap-3 pt-4">
-                <button className="text-left text-gray-800 font-medium hover:text-amber-900 transition py-2">
-                  About Us
-                </button>
-                <button className="text-left text-gray-800 font-medium hover:text-amber-900 transition py-2">
-                  Academics
-                </button>
-                <button className="text-left text-gray-800 font-medium hover:text-amber-900 transition py-2">
-                  Media Hub
-                </button>
-                <button className="text-left text-gray-800 font-medium hover:text-amber-900 transition py-2">
-                  Facility
-                </button>
-                <a
-                  href="#"
-                  className="text-gray-800 font-medium hover:text-amber-900 transition py-2"
+          <div
+            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+              isOpen ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="flex flex-col gap-1 pt-2 border-t border-gray-100">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  smooth={true}
+                  duration={link.duration || 700}
+                  onClick={handleNavClick}
+                  className="text-left text-gray-800 font-medium hover:text-[#FFBF00] hover:bg-gray-50 transition-all duration-200 py-3 px-3 rounded-lg cursor-pointer"
                 >
-                  School Policies
-                </a>
+                  {link.label}
+                </Link>
+              ))}
+              
+              {/* Mobile Contact Info */}
+              <div className="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3 px-3">
                 <a
-                  href="#"
-                  className="text-gray-800 font-medium hover:text-amber-900 transition py-2"
+                  href="tel:+2347070044177"
+                  className="flex items-center gap-2 text-[#FFBF00] text-sm font-bold"
                 >
-                  Contact Us
+                  <Phone size={16} />
+                  070 700 441 77
                 </a>
+                <div className="flex items-center gap-3">
+                  {[Facebook, Twitter, Youtube, Instagram, Linkedin].map((Icon, i) => (
+                    <a
+                      key={i}
+                      href="#"
+                      className="text-gray-400 hover:text-[#FFBF00] transition-colors"
+                      aria-label={Icon.name}
+                    >
+                      <Icon size={20} />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </nav>
     </div>

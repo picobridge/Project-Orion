@@ -41,14 +41,16 @@ function Process() {
   return (
     <section className="relative bg-red-600 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div data-aos="fade-up" className="text-center mb-16">
-          <p className="text-orange-300 font-semibold text-sm md:text-base mb-3">
-            How it works?
+         <div className="text-center mb-16">
+          <p className="text-orange-300 font-semibold text-sm md:text-base mb-3 uppercase tracking-wider">
+            Our Structure
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-balance">
-            What is the process to Enroll Your Child
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-balance max-w-4xl mx-auto leading-tight">
+            How Bright Rainbows Academy Fits into the Nigerian School System
           </h2>
+          <p className="text-red-100 text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+            Structured to follow the standard Nigerian school system, but exceeding expectations with high-quality care, modern facilities, and a focus on each child's unique needs.
+          </p>
         </div>
 
         {/* Steps */}

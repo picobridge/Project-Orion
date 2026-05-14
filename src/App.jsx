@@ -13,6 +13,8 @@ import Process from "./Components/Process.jsx";
 import GallerySection from "./Components/GallerySection.jsx";
 import Footer from "./Components/Footer.jsx";
 import { Element } from "react-scroll";
+import HeaderWithSlider from "./Components/LandingSlider";
+import Facilities from "./Components/Facilities.jsx";
 
 function App() {
   useEffect(() => {
@@ -38,10 +40,10 @@ function App() {
 
   return (
     <>
-      <Header />
+  
 
       <Element name="home">
-        <LandingSlider />
+        <HeaderWithSlider/>
       </Element>
 
       <Element name="newcontent">
@@ -58,6 +60,9 @@ function App() {
 
       <Element name="process">
         <Process />
+      </Element>
+      <Element name="facilities">
+      <Facilities/>
       </Element>
 
       <Element name="gallery">

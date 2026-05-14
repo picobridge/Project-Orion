@@ -107,7 +107,7 @@ export default function HeaderWithSlider() {
   const isTransparent = inSliderSection && !scrolled;
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Fixed Header */}
       <div 
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"

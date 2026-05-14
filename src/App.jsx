@@ -15,6 +15,7 @@ import Footer from "./Components/Footer.jsx";
 import { Element } from "react-scroll";
 import HeaderWithSlider from "./Components/LandingSlider";
 import Facilities from "./Components/Facilities.jsx";
+import NigerianSchoolSystem from "./Components/SchoolSystem.jsx";
 
 function App() {
   useEffect(() => {
@@ -47,11 +48,11 @@ function App() {
       </Element>
 
       <Element name="newcontent">
-        <Newcontent />
+        <AboutSection />
       </Element>
 
       <Element name="about">
-        <AboutSection />
+        <Newcontent />
       </Element>
 
       <Element name="corevalues">
@@ -63,6 +64,9 @@ function App() {
       </Element>
       <Element name="facilities">
       <Facilities/>
+      </Element>
+      <Element name="School System">
+        <NigerianSchoolSystem/>
       </Element>
 
       <Element name="gallery">

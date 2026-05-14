@@ -48,7 +48,7 @@ function CoreValues() {
   ];
 
   return (
-    <section className="py-16 relative md:py-24 bg-[#f5f3f7]">
+    <section className="py-16 relative md:py-24 bg-[#f5f3f7] overflow-x-hidden">
       <div className="container mx-auto px-8 w-[100%]">
         <h2 className="text-4xl font-bold mb-6 text-center" data-aos="fade-up">
           Our Core Values

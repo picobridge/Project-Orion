@@ -113,7 +113,7 @@ const facilities = [
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="py-[5rem] md:py-[7rem] bg-[#FDFBF7] overflow-x-hidden">
+    <section id="facilities" className="py-[5rem] md:py-[7rem] bg-[#f5f3f7] overflow-x-hidden">
       <div className="max-w-[80rem] mx-auto px-[1rem] sm:px-[1.5rem] lg:px-[2rem]">
         {/* Section Header */}
         <div className="text-center max-w-[48rem] mx-auto mb-[3.5rem] md:mb-[5rem]">

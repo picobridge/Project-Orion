@@ -58,13 +58,14 @@ function App() {
       <Element name="corevalues">
         <CoreValues />
       </Element>
+      <Element name="facilities">
+      <Facilities/>
+      </Element>
 
       <Element name="process">
         <Process />
       </Element>
-      <Element name="facilities">
-      <Facilities/>
-      </Element>
+      
       <Element name="School System">
         <NigerianSchoolSystem/>
       </Element>

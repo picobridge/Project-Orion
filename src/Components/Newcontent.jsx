@@ -26,10 +26,10 @@ export default function Newcontent() {
             </div>
 
             <h1 className="text-balance text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[2.75rem] xl:text-[3.25rem] font-bold leading-[1.15] text-white">
-              Welcome to{" "}
-              <span className="text-[#FDE68A]">Bright Rainbows</span>
+             A Passion for Education, 
+              <span className="text-[#FDE68A]">A Heart for Children</span>
               <br />
-              Academy
+             
             </h1>
 
             <div className="space-y-[1rem] sm:space-y-[1.25rem] text-[0.9375rem] sm:text-[1rem] leading-[1.75] text-white/80">
@@ -69,9 +69,7 @@ export default function Newcontent() {
                   className="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/35"
                   aria-label="Play video"
                 >
-                  <div className="w-[3.5rem] h-[3.5rem] sm:w-[4rem] sm:h-[4rem] rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-xl transition-transform duration-300 group-hover:scale-110">
-                    <Play size={20} className="text-[#B91C1C] ml-[0.25rem]" fill="#B91C1C" />
-                  </div>
+                 
                 </button>
               </div>
             </div>
@@ -166,23 +164,21 @@ export default function Newcontent() {
       {/* Floating patterns - hidden on mobile */}
       <img
         src="pattern4.png"
-        className="absolute top-[5rem] right-[3rem] hidden lg:block w-[3.5rem] h-[3.5rem] opacity-20 brightness-200"
+        className="absolute top-[5rem] right-[3rem] hidden lg:block w-[4rem] h-[4rem] "
         alt=""
       />
       <img
         src="pattern5.png"
-        className="absolute bottom-[5rem] left-[1rem] hidden lg:block w-[3.5rem] h-[3.5rem] opacity-20 brightness-200"
+        className="absolute bottom-[5rem] left-[1rem] hidden lg:block w-[10rem] h-[10rem] "
         alt=""
       />
       
       {/* Cloud decorations - bottom */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-        <img src="cloudimg.png" className="w-full opacity-90" alt="" />
+      <div className="absolute bottom-0 left-0 right-0">
+        <img src="cloudimg.png" className="w-full" alt="Clouds" />
       </div>
-      
-      {/* Cloud decorations - top (rotated) */}
-      <div className="absolute -top-1 right-0 rotate-180 pointer-events-none hidden lg:block">
-        <img src="cloudimg.png" className="w-full opacity-60" alt="" />
+      <div className="absolute -top-1 right-0 rotate-180">
+        <img src="cloudimg.png" className="w-full" alt="Clouds" />
       </div>
     </section>
   );

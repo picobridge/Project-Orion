@@ -115,7 +115,7 @@ const specialFeatures = [
 
 export default function NigerianSchoolSystem() {
   return (
-    <section id="about" className="py-[5rem] md:py-[7rem] bg-[#FDFBF7] overflow-x-hidden">
+    <section id="about" className="py-[5rem] md:py-[7rem] bg-[#f5f3f7] overflow-x-hidden">
       <div className="max-w-[80rem] mx-auto px-[1rem] sm:px-[1.5rem] lg:px-[2rem]">
         
         {/* Section Header */}
@@ -146,7 +146,7 @@ export default function NigerianSchoolSystem() {
             return (
               <div
                 key={stage.id}
-                className="relative z-10 flex flex-col items-center gap-[0.75rem] bg-[#FDFBF7] px-[1rem]"
+                className="relative z-10 flex flex-col items-center gap-[0.75rem] bg-[#f5f3f7] px-[1rem]"
                 data-aos="zoom-in"
                 data-aos-delay={index * 150}
               >

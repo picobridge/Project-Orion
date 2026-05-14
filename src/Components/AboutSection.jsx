@@ -66,15 +66,15 @@ function AboutSection() {
             {/* Stats Row */}
             <div className="flex flex-wrap gap-[2rem] sm:gap-[3rem] mt-[2.5rem] pt-[1.5rem] border-t border-slate-200">
               <div>
-                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">15+</p>
+                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">6+</p>
                 <p className="text-[0.8125rem] text-slate-400 mt-[0.375rem] tracking-wide uppercase">Years Experience</p>
               </div>
               <div>
-                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">500+</p>
+                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">70+</p>
                 <p className="text-[0.8125rem] text-slate-400 mt-[0.375rem] tracking-wide uppercase">Happy Students</p>
               </div>
               <div>
-                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">50+</p>
+                <p className="text-[2rem] sm:text-[2.5rem] font-bold text-[#ebac24] leading-none">12+</p>
                 <p className="text-[0.8125rem] text-slate-400 mt-[0.375rem] tracking-wide uppercase">Expert Teachers</p>
               </div>
             </div>
@@ -105,9 +105,7 @@ function AboutSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                 <div className="absolute bottom-[1rem] left-[1rem] right-[1rem]">
-                  <span className="inline-block px-[0.75rem] py-[0.375rem] bg-white/90 backdrop-blur-sm rounded-full text-[0.75rem] font-medium text-slate-700 tracking-wide">
-                    Classroom Learning
-                  </span>
+                 
                 </div>
               </div>
 
@@ -124,7 +122,7 @@ function AboutSection() {
               {/* Middle right image - spans 5 cols, 2 rows */}
               <div className="col-span-6 sm:col-span-5 row-span-2 relative group overflow-hidden rounded-2xl shadow-sm">
                 <img
-                  src="gird4.jpeg"
+                  src="img9.jpeg"
                   alt="Teacher engaging with students in an interactive classroom setting"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
@@ -134,7 +132,7 @@ function AboutSection() {
               {/* Bottom left wide image - spans 4 cols, 2 rows */}
               <div className="col-span-4 row-span-2 relative group overflow-hidden rounded-2xl shadow-sm hidden sm:block">
                 <img
-                  src="grid1.jpeg"
+                  src="img8.jpeg"
                   alt="Students collaborating on a creative project"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
@@ -144,7 +142,7 @@ function AboutSection() {
               {/* Bottom middle image - spans 4 cols, 2 rows */}
               <div className="col-span-4 row-span-2 relative group overflow-hidden rounded-2xl shadow-sm hidden sm:block">
                 <img
-                  src="grid4.jpeg"
+                  src="img10.jpeg"
                   alt="Outdoor learning activities and play"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
@@ -154,7 +152,7 @@ function AboutSection() {
               {/* Bottom right image - spans 4 cols, 2 rows */}
               <div className="col-span-4 row-span-2 relative group overflow-hidden rounded-2xl shadow-sm hidden sm:block">
                 <img
-                  src="grid3.jpeg"
+                  src="img5.jpeg"
                   alt="School facilities and learning spaces"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
@@ -164,14 +162,14 @@ function AboutSection() {
               {/* Mobile-only: additional images in a row */}
               <div className="col-span-6 row-span-1 relative group overflow-hidden rounded-xl shadow-sm sm:hidden">
                 <img
-                  src="grid2.jpeg"
+                  src="img6.jpeg"
                   alt="Students collaborating"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="col-span-6 row-span-1 relative group overflow-hidden rounded-xl shadow-sm sm:hidden">
                 <img
-                  src="grid3.jpeg"
+                  src="img7.jpeg"
                   alt="Outdoor activities"
                   className="w-full h-full object-cover"
                 />

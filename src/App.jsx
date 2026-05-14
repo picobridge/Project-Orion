@@ -47,11 +47,11 @@ function App() {
         <HeaderWithSlider/>
       </Element>
 
-      <Element name="newcontent">
+      <Element name="about">
         <AboutSection />
       </Element>
 
-      <Element name="about">
+      <Element name="newcontent">
         <Newcontent />
       </Element>
 

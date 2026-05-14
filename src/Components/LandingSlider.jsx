@@ -144,7 +144,7 @@ export default function HeaderWithSlider() {
               <div className="flex items-center gap-[1.5rem] text-[0.75rem]">
                 <a href="tel:+2347070044177" className="flex items-center gap-[0.5rem] text-[#FFBF00] hover:text-[#e6ac00] transition-colors">
                   <Phone size={16} className="text-[#FFBF00]" />
-                  <span className="font-bold">070 700 441 77</span>
+                  <span className="font-bold"><a href="https://wa.me/07070044177">070 700 441 77</a></span>
                 </a>
                 <a href="mailto:brightrainbowsacademy@gmail.com" className="flex items-center gap-[0.5rem] text-[#FFBF00] hover:text-[#e6ac00] transition-colors">
                   <Mail size={16} className="text-[#FFBF00]" />
@@ -314,7 +314,7 @@ export default function HeaderWithSlider() {
                     <Link to="about" smooth={true} duration={700}>Learn More</Link>
                   </button>
                   <button className="px-[1.5rem] py-[0.75rem] bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full hover:bg-white/20 transition-colors duration-300 border border-white/30">
-                    <Link to="footer" smooth={true} duration={700}>Contact Us</Link>
+                    <a href="https://wa.me/07070044177" smooth={true} duration={700}>Contact Us</a>
                   </button>
                 </div>
               </div>

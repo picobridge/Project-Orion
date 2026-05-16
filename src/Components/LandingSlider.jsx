@@ -157,14 +157,15 @@ export default function HeaderWithSlider() {
               </div>
               <div className="flex items-center gap-[1rem]">
                 <div className="flex items-center gap-[0.75rem]">
-                  {[Facebook, Twitter, Youtube, Instagram, Linkedin].map((Icon, i) => (
-                    <a key={i} href="#" className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200" aria-label={Icon.name}>
-                      <Icon size={18} />
-                    </a>
-                  ))}
+                  <a href="https://www.facebook.com/people/Bright-Rainbows-Academy/61582659060147/?mibextid=wwXIfr&rdid=iCpZ1aYpF81sVbFJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F186ixDcfHF%2F%3Fmibextid%3DwwXIfr" className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200" aria-label="Facebook">
+                    <Facebook size={18} />
+                  </a>
+                  <a href="https://www.instagram.com/bright_rainbows_academy" className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200" aria-label="Instagram">
+                    <Instagram size={18} />
+                  </a>
                 </div>
                 <button className="bg-[#FFBF00] hover:bg-[#e6ac00] text-white px-[1rem] py-[0.5rem] rounded-[0.375rem] font-semibold transition-all duration-200 whitespace-nowrap text-[0.6875rem] uppercase tracking-wide">
-                  <Link to="footer" smooth={true} duration={700}>Contact Us</Link>
+                  <a href="https://wa.me/07070044177" target="_blank" rel="noopener noreferrer" smooth={true} duration={700}>Contact Us</a>
                 </button>
               </div>
             </div>
@@ -270,11 +271,12 @@ export default function HeaderWithSlider() {
               brightrainbowsacademy@gmail.com
             </a>
             <div className="flex items-center gap-[1rem]">
-              {[Facebook, Twitter, Youtube, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="text-gray-400 hover:text-[#FFBF00] transition-colors" aria-label={Icon.name}>
-                  <Icon size={20} />
-                </a>
-              ))}
+              <a href="https://www.facebook.com/people/Bright-Rainbows-Academy/61582659060147/?mibextid=wwXIfr&rdid=iCpZ1aYpF81sVbFJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F186ixDcfHF%2F%3Fmibextid%3DwwXIfr" className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200" aria-label="Facebook">
+                    <Facebook size={18} />
+                  </a>
+                  <a href="https://www.instagram.com/bright_rainbows_academy" className="text-gray-500 hover:text-[#FFBF00] transition-colors duration-200" aria-label="Instagram">
+                    <Instagram size={18} />
+                  </a>
             </div>
           </div>
         </div>

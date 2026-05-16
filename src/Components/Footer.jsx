@@ -38,6 +38,7 @@ function Footer() {
             </div>
 
             {/* Book a Visit button */}
+            <a href="https://wa.me/07070044177" target="_blank" rel="noopener noreferrer">
             <button
               data-aos="fade-in"
               className="cursor-pointer flex-shrink-0 w-40 h-40 rounded-full bg-red-600 hover:bg-red-700 transition-colors flex items-center justify-center"
@@ -46,6 +47,7 @@ function Footer() {
                 Book a Visit
               </span>
             </button>
+            </a>
           </div>
         </div>
       </div>
@@ -159,28 +161,16 @@ function Footer() {
             <div className="flex flex-col items-center md:items-end justify-start gap-6">
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/Bright-Rainbows-Academy/61582659060147/?mibextid=wwXIfr&rdid=iCpZ1aYpF81sVbFJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F186ixDcfHF%2F%3Fmibextid%3DwwXIfr"
                   className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-100 transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5 text-black" />
                 </a>
+              
+                
                 <a
-                  href="#"
-                  className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-100 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5 text-black" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-100 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-black" />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/bright_rainbows_academy"
                   className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center hover:bg-gray-100 transition-colors"
                   aria-label="Instagram"
                 >
